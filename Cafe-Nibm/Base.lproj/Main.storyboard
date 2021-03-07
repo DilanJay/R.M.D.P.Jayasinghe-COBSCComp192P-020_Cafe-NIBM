@@ -184,7 +184,7 @@
         <!--Location View Controller-->
         <scene sceneID="iBc-tK-k8f">
             <objects>
-                <viewController id="Vga-Mi-ifw" customClass="LocationViewController" customModule="Cafe_Nibm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationViewController" id="Vga-Mi-ifw" customClass="LocationViewController" customModule="Cafe_Nibm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VHU-ub-FeZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,6 +239,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="IVu-4l-xZF" kind="presentation" modalPresentationStyle="fullScreen" id="HqD-YG-n1N"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7cv-uN-NA4"/>
@@ -284,7 +287,7 @@
         <!--FOOD-->
         <scene sceneID="xyA-5A-t1O">
             <objects>
-                <viewController id="W5q-7u-m2P" sceneMemberID="viewController">
+                <viewController id="W5q-7u-m2P" customClass="FoodViewController" customModule="Cafe_Nibm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sek-QW-oeY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -293,7 +296,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="150" id="3Os-I2-EA2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="150" id="3Os-I2-EA2" customClass="FoodTableViewCell" customModule="Cafe_Nibm" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3Os-I2-EA2" id="VOA-1N-yB4">
@@ -340,8 +343,18 @@
                                                 <constraint firstItem="vG6-Fd-KF6" firstAttribute="top" secondItem="30s-Yb-bvW" secondAttribute="bottom" constant="15" id="wc0-yq-TNd"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="foodDescriptionLabel" destination="vG6-Fd-KF6" id="ETa-eq-7qw"/>
+                                            <outlet property="foodImageView" destination="l1W-8F-vSY" id="tco-y5-Yld"/>
+                                            <outlet property="foodNameLabel" destination="30s-Yb-bvW" id="BhP-bk-jBQ"/>
+                                            <outlet property="priceLabel" destination="vjl-x8-0uX" id="Emu-Zg-eTi"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="W5q-7u-m2P" id="Rhl-d3-wHW"/>
+                                    <outlet property="delegate" destination="W5q-7u-m2P" id="gkp-RX-gjW"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="UoN-R6-QRn"/>
@@ -355,6 +368,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="FOOD" id="5Fs-1d-f2L"/>
                     <connections>
+                        <outlet property="tableView" destination="YUe-WM-fGE" id="sfq-ek-W2m"/>
                         <segue destination="FLq-36-sa9" kind="show" id="nKm-Di-lRH"/>
                     </connections>
                 </viewController>
@@ -362,20 +376,14 @@
             </objects>
             <point key="canvasLocation" x="6308" y="-620"/>
         </scene>
-        <!--View Controller-->
+        <!--Food Detail View Controller-->
         <scene sceneID="m5h-bg-TyM">
             <objects>
-                <viewController id="FLq-36-sa9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodDetailViewController" id="FLq-36-sa9" customClass="FoodDetailViewController" customModule="Cafe_Nibm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pm5-pT-cR3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-xD-X9q">
-                                <rect key="frame" x="20" y="44" width="335" height="170"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="tY6-Ah-jfF"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4h-Gm-dWk">
                                 <rect key="frame" x="20" y="239" width="52" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
@@ -410,6 +418,9 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="addToCartBtn:" destination="FLq-36-sa9" eventType="touchUpInside" id="evL-Zz-Jht"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oq7-e6-a45">
                                 <rect key="frame" x="291" y="174" width="44" height="25"/>
@@ -421,6 +432,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U1q-xD-X9q">
+                                <rect key="frame" x="20" y="44" width="335" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="tY6-Ah-jfF"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X90-rS-iUT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -441,6 +458,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jIh-x1-jc7"/>
+                    <connections>
+                        <outlet property="addtoCartButton" destination="1K3-y3-Gbe" id="eV2-lc-D1o"/>
+                        <outlet property="detailFoodDescription" destination="UAR-hL-4Vn" id="MdO-PR-2be"/>
+                        <outlet property="detailFoodImage" destination="U1q-xD-X9q" id="FH1-zC-qZT"/>
+                        <outlet property="detailFoodName" destination="n4h-Gm-dWk" id="Zcy-qw-rC6"/>
+                        <outlet property="detailOfferLabel" destination="oq7-e6-a45" id="uAx-b1-68a"/>
+                        <outlet property="detailPrice" destination="6JZ-AZ-Raf" id="51C-XA-tjd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyN-IE-4Hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

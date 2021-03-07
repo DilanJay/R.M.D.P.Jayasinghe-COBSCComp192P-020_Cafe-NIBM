@@ -16,7 +16,6 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         errorLabel.alpha = 0
     }
     

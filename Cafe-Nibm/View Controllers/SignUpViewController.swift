@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class SignUpViewController: UIViewController {
     
@@ -18,7 +20,6 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         errorLabel.alpha = 0
     }
     
@@ -31,8 +32,8 @@ class SignUpViewController: UIViewController {
         //Check if the password is secuire
         let password = passwordText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        static func isPasswordValid(_ password: String) -> Bool {
-            let passwordText = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        if Validation.passwordValid(password) == false {
+            return "8 cgrctr must have symbols"
         }
         
         return nil
@@ -41,10 +42,47 @@ class SignUpViewController: UIViewController {
     
     @IBAction func signUpBtn(_ sender: UIButton) {
         //Validate the fields
+        let error = validateFields()
         
-        //Create user
+        if error != nil {
+            showError(error!)
+        }
+        else {
+            
+            let phoneNumber = phoneNoText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordText.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            //Create user
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+                //Chech for errors
+                if err != nil {
+                    self.showError("Error creating the user")
+                }
+                else {
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["phoneNumber" : phoneNumber, "uid" : result!.user.uid]) { (error) in
+                        if error != nil {
+                            self.showError("Error saving user data")
+                        }
+                    }
+                    //Transition to the home screen
+                    self.signUpSuccess()                }
+            }
+        }
         
-        //Transition to the home screen
+    }
+    
+    func showError(_ message: String) {
+        errorLabel.text = message
+        errorLabel.alpha = 1
+    }
+    
+    func signUpSuccess() {
+        let locationviewConroller = storyboard?.instantiateViewController(identifier: Constants.Storyboard.locationViewController) as? LocationViewController
+        
+        view.window?.rootViewController = locationviewConroller
+        view.window?.makeKeyAndVisible() 
     }
     
 }
