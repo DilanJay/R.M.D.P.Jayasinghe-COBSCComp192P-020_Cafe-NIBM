@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3742F62BD684D0231410929A /* Pods_Cafe_Nibm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F895FB5134DC866DE60BE8 /* Pods_Cafe_Nibm.framework */; };
+		693A3E8025F5293000A7FF0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 693A3E7F25F5293000A7FF0E /* GoogleService-Info.plist */; };
+		69513C4925F4D46B00E2C861 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69513C4825F4D46B00E2C861 /* LocationViewController.swift */; };
+		69513C4D25F4E0A000E2C861 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69513C4C25F4E0A000E2C861 /* SignUpViewController.swift */; };
+		69513C5025F4E0B300E2C861 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69513C4F25F4E0B300E2C861 /* LogInViewController.swift */; };
 		69AEC2B125EB46FD00AD7961 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AEC2B025EB46FD00AD7961 /* AppDelegate.swift */; };
 		69AEC2B325EB46FD00AD7961 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AEC2B225EB46FD00AD7961 /* SceneDelegate.swift */; };
 		69AEC2B525EB46FD00AD7961 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AEC2B425EB46FD00AD7961 /* ViewController.swift */; };
@@ -16,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		693A3E7F25F5293000A7FF0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		69513C4825F4D46B00E2C861 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		69513C4C25F4E0A000E2C861 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		69513C4F25F4E0B300E2C861 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		69AEC2AD25EB46FD00AD7961 /* Cafe-Nibm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cafe-Nibm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69AEC2B025EB46FD00AD7961 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69AEC2B225EB46FD00AD7961 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +33,9 @@
 		69AEC2B925EB46FE00AD7961 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69AEC2BC25EB46FE00AD7961 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69AEC2BE25EB46FE00AD7961 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		749431CCB2A236C39F9F8AA6 /* Pods-Cafe-Nibm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe-Nibm.release.xcconfig"; path = "Target Support Files/Pods-Cafe-Nibm/Pods-Cafe-Nibm.release.xcconfig"; sourceTree = "<group>"; };
+		83745D4C16D9E7B2C2DC0127 /* Pods-Cafe-Nibm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cafe-Nibm.debug.xcconfig"; path = "Target Support Files/Pods-Cafe-Nibm/Pods-Cafe-Nibm.debug.xcconfig"; sourceTree = "<group>"; };
+		C9F895FB5134DC866DE60BE8 /* Pods_Cafe_Nibm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Cafe_Nibm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +43,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3742F62BD684D0231410929A /* Pods_Cafe_Nibm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4585508AF9F557EFE418EFEF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9F895FB5134DC866DE60BE8 /* Pods_Cafe_Nibm.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69513C5225F4E0D700E2C861 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				69513C4825F4D46B00E2C861 /* LocationViewController.swift */,
+				69513C4F25F4E0B300E2C861 /* LogInViewController.swift */,
+				69513C4C25F4E0A000E2C861 /* SignUpViewController.swift */,
+				69AEC2B425EB46FD00AD7961 /* ViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		69AEC2A425EB46FC00AD7961 = {
 			isa = PBXGroup;
 			children = (
 				69AEC2AF25EB46FD00AD7961 /* Cafe-Nibm */,
 				69AEC2AE25EB46FD00AD7961 /* Products */,
+				B491D647962E1A7514E1E3DD /* Pods */,
+				4585508AF9F557EFE418EFEF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +92,23 @@
 			children = (
 				69AEC2B025EB46FD00AD7961 /* AppDelegate.swift */,
 				69AEC2B225EB46FD00AD7961 /* SceneDelegate.swift */,
-				69AEC2B425EB46FD00AD7961 /* ViewController.swift */,
+				69513C5225F4E0D700E2C861 /* View Controllers */,
 				69AEC2B625EB46FD00AD7961 /* Main.storyboard */,
 				69AEC2B925EB46FE00AD7961 /* Assets.xcassets */,
 				69AEC2BB25EB46FE00AD7961 /* LaunchScreen.storyboard */,
 				69AEC2BE25EB46FE00AD7961 /* Info.plist */,
+				693A3E7F25F5293000A7FF0E /* GoogleService-Info.plist */,
 			);
 			path = "Cafe-Nibm";
+			sourceTree = "<group>";
+		};
+		B491D647962E1A7514E1E3DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83745D4C16D9E7B2C2DC0127 /* Pods-Cafe-Nibm.debug.xcconfig */,
+				749431CCB2A236C39F9F8AA6 /* Pods-Cafe-Nibm.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +118,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 69AEC2C125EB46FE00AD7961 /* Build configuration list for PBXNativeTarget "Cafe-Nibm" */;
 			buildPhases = (
+				0B05DDA25B45D03F81ADE7C0 /* [CP] Check Pods Manifest.lock */,
 				69AEC2A925EB46FD00AD7961 /* Sources */,
 				69AEC2AA25EB46FD00AD7961 /* Frameworks */,
 				69AEC2AB25EB46FD00AD7961 /* Resources */,
+				0DD562AB0A69EFBC202AB81E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +171,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				69AEC2BD25EB46FE00AD7961 /* LaunchScreen.storyboard in Resources */,
+				693A3E8025F5293000A7FF0E /* GoogleService-Info.plist in Resources */,
 				69AEC2BA25EB46FE00AD7961 /* Assets.xcassets in Resources */,
 				69AEC2B825EB46FD00AD7961 /* Main.storyboard in Resources */,
 			);
@@ -132,14 +179,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0B05DDA25B45D03F81ADE7C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Cafe-Nibm-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DD562AB0A69EFBC202AB81E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cafe-Nibm/Pods-Cafe-Nibm-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Cafe-Nibm/Pods-Cafe-Nibm-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Cafe-Nibm/Pods-Cafe-Nibm-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		69AEC2A925EB46FD00AD7961 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69513C4925F4D46B00E2C861 /* LocationViewController.swift in Sources */,
 				69AEC2B525EB46FD00AD7961 /* ViewController.swift in Sources */,
+				69513C5025F4E0B300E2C861 /* LogInViewController.swift in Sources */,
 				69AEC2B125EB46FD00AD7961 /* AppDelegate.swift in Sources */,
 				69AEC2B325EB46FD00AD7961 /* SceneDelegate.swift in Sources */,
+				69513C4D25F4E0A000E2C861 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +375,7 @@
 		};
 		69AEC2C225EB46FE00AD7961 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83745D4C16D9E7B2C2DC0127 /* Pods-Cafe-Nibm.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +394,7 @@
 		};
 		69AEC2C325EB46FE00AD7961 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 749431CCB2A236C39F9F8AA6 /* Pods-Cafe-Nibm.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
