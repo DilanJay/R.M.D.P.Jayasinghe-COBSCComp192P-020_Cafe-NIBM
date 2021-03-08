@@ -8,5 +8,7 @@ target 'Cafe-Nibm' do
 pod 'SPPermissions/Location'
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
+pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
 
 end

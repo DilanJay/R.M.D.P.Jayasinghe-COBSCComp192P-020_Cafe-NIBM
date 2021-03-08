@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		3742F62BD684D0231410929A /* Pods_Cafe_Nibm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F895FB5134DC866DE60BE8 /* Pods_Cafe_Nibm.framework */; };
 		693A3E8025F5293000A7FF0E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 693A3E7F25F5293000A7FF0E /* GoogleService-Info.plist */; };
+		693A3E9525F550E300A7FF0E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A3E9425F550E300A7FF0E /* Validation.swift */; };
+		693A3EB025F56BEF00A7FF0E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A3EAF25F56BEF00A7FF0E /* Constants.swift */; };
+		693A3EC125F572BB00A7FF0E /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A3EC025F572BB00A7FF0E /* FoodViewController.swift */; };
+		693A3EC425F572CB00A7FF0E /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A3EC325F572CB00A7FF0E /* FoodDetailViewController.swift */; };
+		693A3EC725F572E100A7FF0E /* FoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693A3EC625F572E100A7FF0E /* FoodTableViewCell.swift */; };
 		69513C4925F4D46B00E2C861 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69513C4825F4D46B00E2C861 /* LocationViewController.swift */; };
 		69513C4D25F4E0A000E2C861 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69513C4C25F4E0A000E2C861 /* SignUpViewController.swift */; };
 		69513C5025F4E0B300E2C861 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69513C4F25F4E0B300E2C861 /* LogInViewController.swift */; };
@@ -22,6 +27,11 @@
 
 /* Begin PBXFileReference section */
 		693A3E7F25F5293000A7FF0E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		693A3E9425F550E300A7FF0E /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		693A3EAF25F56BEF00A7FF0E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		693A3EC025F572BB00A7FF0E /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		693A3EC325F572CB00A7FF0E /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		693A3EC625F572E100A7FF0E /* FoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTableViewCell.swift; sourceTree = "<group>"; };
 		69513C4825F4D46B00E2C861 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		69513C4C25F4E0A000E2C861 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		69513C4F25F4E0B300E2C861 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +68,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		693A3EAE25F56BAA00A7FF0E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				693A3E9425F550E300A7FF0E /* Validation.swift */,
+				693A3EAF25F56BEF00A7FF0E /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		69513C5225F4E0D700E2C861 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +84,8 @@
 				69513C4F25F4E0B300E2C861 /* LogInViewController.swift */,
 				69513C4C25F4E0A000E2C861 /* SignUpViewController.swift */,
 				69AEC2B425EB46FD00AD7961 /* ViewController.swift */,
+				693A3EC025F572BB00A7FF0E /* FoodViewController.swift */,
+				693A3EC325F572CB00A7FF0E /* FoodDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -90,6 +111,7 @@
 		69AEC2AF25EB46FD00AD7961 /* Cafe-Nibm */ = {
 			isa = PBXGroup;
 			children = (
+				693A3EAE25F56BAA00A7FF0E /* Helpers */,
 				69AEC2B025EB46FD00AD7961 /* AppDelegate.swift */,
 				69AEC2B225EB46FD00AD7961 /* SceneDelegate.swift */,
 				69513C5225F4E0D700E2C861 /* View Controllers */,
@@ -98,6 +120,7 @@
 				69AEC2BB25EB46FE00AD7961 /* LaunchScreen.storyboard */,
 				69AEC2BE25EB46FE00AD7961 /* Info.plist */,
 				693A3E7F25F5293000A7FF0E /* GoogleService-Info.plist */,
+				693A3EC625F572E100A7FF0E /* FoodTableViewCell.swift */,
 			);
 			path = "Cafe-Nibm";
 			sourceTree = "<group>";
@@ -226,12 +249,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				693A3EC725F572E100A7FF0E /* FoodTableViewCell.swift in Sources */,
 				69513C4925F4D46B00E2C861 /* LocationViewController.swift in Sources */,
 				69AEC2B525EB46FD00AD7961 /* ViewController.swift in Sources */,
 				69513C5025F4E0B300E2C861 /* LogInViewController.swift in Sources */,
+				693A3EC425F572CB00A7FF0E /* FoodDetailViewController.swift in Sources */,
 				69AEC2B125EB46FD00AD7961 /* AppDelegate.swift in Sources */,
+				693A3EC125F572BB00A7FF0E /* FoodViewController.swift in Sources */,
 				69AEC2B325EB46FD00AD7961 /* SceneDelegate.swift in Sources */,
+				693A3E9525F550E300A7FF0E /* Validation.swift in Sources */,
 				69513C4D25F4E0A000E2C861 /* SignUpViewController.swift in Sources */,
+				693A3EB025F56BEF00A7FF0E /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
