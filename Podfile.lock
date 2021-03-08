@@ -332,6 +332,8 @@ PODS:
   - nanopb/decode (1.30906.0)
   - nanopb/encode (1.30906.0)
   - PromisesObjC (1.2.12)
+  - SPPermissions (5.4.1):
+    - SPPermissions/Core (= 5.4.1)
   - SPPermissions/Core (5.4.1)
   - SPPermissions/Location (5.4.1):
     - SPPermissions/Core
@@ -341,6 +343,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Firestore
   - FirebaseFirestoreSwift
+  - SPPermissions
   - SPPermissions/Location
 
 SPEC REPOS:
@@ -388,6 +391,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SPPermissions: a093e8045c7aeb23a08acda6d288e3543f27f8fa
 
-PODFILE CHECKSUM: 60122ceda8a3140d1196d7ba36c02c29049501c2
+PODFILE CHECKSUM: b65eb1a7909df2097195b7b717e93eb757552c5b
 
 COCOAPODS: 1.10.1
